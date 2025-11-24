@@ -5,16 +5,20 @@
 <hr/>
 
 
-# grave os comandos abaixo em "/lib/udev/rules.d/99-steam-controller-perms.rules",
+# grave os comandos abaixo em 
+# "/lib/udev/rules.d/99-steam-controller-perms.rules",
 "sudo nano /lib/udev/rules.d/99-steam-controller-perms.rules".
 
 <hr/>
 
 ```bash
-#Essa regra é necessária para o funcionamento básico do controle no Steam e para a emulação de teclado/mouse.
+# Essa regra é necessária para o funcionamento básico do
+# controle no Steam e para a emulação de teclado/mouse.
 SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0666"
 
-#Essa regra é necessária para a emulação de gamepad; certifique-se de substituir 'pgriffais' por um grupo ao qual o usuário que executa o Steam pertença.
+# Essa regra é necessária para a emulação de gamepad;
+# certifique-se de substituir 'pgriffais' por um grupo ao qual o usuário 
+# que executa o Steam pertença.
 KERNEL=="uinput", MODE="0660", GROUP="pgriffais", OPTIONS+="static_node=uinput"
 
 #Dispositivos Valve HID via Bluetooth Hidraw
