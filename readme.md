@@ -11,31 +11,31 @@
 <hr/>
 
 ```bash
-<span style="font-size:28px;">#Essa regra é necessária para o funcionamento básico do controle no Steam e para a emulação de teclado/mouse.</span>
+#Essa regra é necessária para o funcionamento básico do controle no Steam e para a emulação de teclado/mouse.
 SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0666"
 
-<span style="font-size:28px;">#Essa regra é necessária para a emulação de gamepad; certifique-se de substituir 'pgriffais' por um grupo ao qual o usuário que executa o Steam pertença.</span>
+#Essa regra é necessária para a emulação de gamepad; certifique-se de substituir 'pgriffais' por um grupo ao qual o usuário que executa o Steam pertença.
 KERNEL=="uinput", MODE="0660", GROUP="pgriffais", OPTIONS+="static_node=uinput"
 
-<span style="font-size:28px;">#Dispositivos Valve HID via Bluetooth Hidraw</span>
+#Dispositivos Valve HID via Bluetooth Hidraw
 KERNEL=="hidraw*", ATTRS{idVendor}=="28de", MODE="0666"
 
-<span style="font-size:28px;">#Valve HID devices over bluetooth hidraw</span>
+#Valve HID devices over bluetooth hidraw
 KERNEL=="hidraw*", KERNELS=="*28DE:*", MODE="0666"
 
-<span style="font-size:28px;">#DualShock 4 via USB hidraw</span>
+#DualShock 4 via USB hidraw
 KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="05c4", MODE="0666"
 
-<span style="font-size:28px;">#Adaptador sem fio DualShock 4 via USB hidraw</span>
+#Adaptador sem fio DualShock 4 via USB hidraw
 KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="0ba0", MODE="0666"
 
-<span style="font-size:28px;">#DualShock 4 Slim sobre USB hidraw</span>
+#DualShock 4 Slim sobre USB hidraw
 KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="09cc", MODE="0666"
 
-<span style="font-size:28px;">#DualShock 4 via Bluetooth Hidraw</span>
+#DualShock 4 via Bluetooth Hidraw
 KERNEL=="hidraw*", KERNELS=="*054C:05C4*", MODE="0666"
 
-<span style="font-size:28px;">#DualShock 4 Slim via Bluetooth Hidraw</span>
+#DualShock 4 Slim via Bluetooth Hidraw
 KERNEL=="hidraw*", KERNELS=="*054C:09CC*", MODE="0666"
 ```
 
