@@ -1,3 +1,9 @@
+<span style="font-size:21px;">Achei esse codigo na internet em um forum, demorei horrores para achar, não dou o credito porque nãolembro onde foi.
+    Aqui tem algumas soluções para conexão de dispositivos, principalmente controle dualshock 4, use as variaveis que quiser.</span>
+
+
+<hr/>
+
 
 #grave os comandos acima em "/lib/udev/rules.d/99-steam-controller-perms.rules",
 "sudo nano /lib/udev/rules.d/99-steam-controller-perms.rules".
@@ -34,22 +40,22 @@ KERNEL=="hidraw*", KERNELS=="*054C:09CC*", MODE="0666"
 
 ##########################################################################
 
-#de permissão para a pasta "/dev/uinput" 
+# de permissão para a pasta "/dev/uinput" 
 sudo chmod 666 /dev/uinput
 
 ##########################################################################
 
-#instale "python3-autopilot"
+# instale "python3-autopilot"
 sudo apt-get install python3-autopilot
 
 ##########################################################################
 
-#rode esse comando
+# rode esse comando
 sudo udevadm trigger
 
 ##########################################################################
 
-#reinicie a steam, e reconecte o controle, se não for reinicie o sistema.
+# reinicie a steam, e reconecte o controle, se não for reinicie o sistema.
 
 ##########################################################################
 
